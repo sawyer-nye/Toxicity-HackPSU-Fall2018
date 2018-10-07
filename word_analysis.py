@@ -23,7 +23,7 @@ def wordCount(comments):
 def make_cloud(all_comments):
     fig1, ax1 = plt.subplots()
     ax1.set_title('Word Cloud')
-    ax1.wordcloud = WordCloud().generate(str(all_comments))
+    ax1.wordcloud = WordCloud(background_color="white").generate(str(all_comments))
     plt.imshow(ax1.wordcloud, interpolation='bilinear')
-    plt.axis('off')
+    plt.axis("off")
     print(mpld3.fig_to_html(fig1))
